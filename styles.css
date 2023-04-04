@@ -2,11 +2,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
-body{
-    
+html {
+    scroll-behavior: smooth;
 }
 
 .container-nav {
@@ -14,8 +14,9 @@ body{
     justify-content: center;
     align-items: center;
     position: sticky;
-    background-color: yellow;
+    background-color: #3E54AC;
     padding: 20px 0;
+    top: 0;
 }
 
 header {
@@ -27,7 +28,7 @@ header {
 }
 
 nav {
-    
+    position: sticky;
 }
 
 nav ul {
@@ -43,15 +44,22 @@ nav ul li {
 
 nav ul a{
     text-decoration: none;
+    color: #e1e1e1;
+    transition: color 0.5s ease;
 }
 
-main {
-    margin: 50px 0;
+nav ul a:hover {
+    background-color: #82C3EC;
+}
+
+body {
+    background-color: #ECF2FF;
 }
 
 .container-content {
     display: flex;
     justify-content: center;
+    margin: 50px 0;
 }
 
 .container-head {
@@ -91,24 +99,38 @@ main {
     overflow-wrap: break-word;
 }
 
+.container-content-about {
+    display: flex;
+    justify-content: center;
+    height: 800px;
+
+}
+
 .container-about {
     display: flex;
     justify-content: space-between;
+    margin: 25px 0;
+    width: 1000px;
+    
 }
 
 #about {
-    margin: 25px 0;
     display: flex;
-    justify-content: space-between;
-    height: 100vh;
+    justify-content: space-evenly;
+    flex-direction: column;
     align-items: center;
     width: 100%;
     box-shadow:  5px 10px 8px 10px #e1e1e1;
+    border-radius: 15px;
+    padding: 15px;
 }
 
 #about-me{
-    display: block;
-    margin-left: 100px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    
 }
 
 #about-me p {
@@ -121,8 +143,8 @@ main {
     width: 350px;
     display: flex;
     justify-content: space-evenly;
-    padding-top: 50px;
-    
+    padding: 0 10px;
+
 }
 
 #Skills ul li {
@@ -132,17 +154,19 @@ main {
 
 #projects {
     padding: 50px;
-    height: 100vh;
     box-shadow:  5px 10px 8px 10px #e1e1e1;
+    border-radius: 15px;
+    margin: 50px;
 }
 
 .container-content-pro {
     display: flex;
     justify-content: center;
+    margin: 50px 0;
 }
 
 .container-projects {
-    margin: 90px 0;
+    padding: 25px;
 }
 
 #projects-content1 {
@@ -155,6 +179,7 @@ main {
 #projects-content1 img {
     width: 300px;
     border: 2px solid black;
+    border-radius: 10px;
 }
 
 #projects-description {
@@ -179,6 +204,10 @@ main {
     font-weight: bold;
 }
 
+.projects-language ul li {
+    color: #4B56D2;
+}
+
 #projects-content2 {
     display: flex;
     justify-content: space-around;
@@ -190,70 +219,64 @@ main {
 #projects-content2 img {
     width: 300px;
     border: 2px solid black;
+    border-radius: 10px;
 }
 
-#skills-page {
-    padding-top: 50px;
-    padding-bottom: 50px;
-    height: 100vh;
-}
-
-.skills-card img{
-    width: 150px;
-}
-
-.skills-card {
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    transition: 0.3s;
-    display: flex;
-    justify-content: space-between;
-    background-color: yellow;
-    height: 250px;
-    
-  }
-
-  .skills-card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-}
-
-.container {
+.row-card {
     display: flex;
     justify-content: center;
 }
 
-.content {
-    background-color: aqua;
-    display: grid;
-    grid-template-columns: repeat(3, auto);
-    grid-auto-rows: minmax(100px, auto);
-    gap: 10px;
-    max-width: fit-content;
+.container{
+    width: 1200px;
+    box-shadow: 5px 10px 8px 10px #e1e1e1;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    padding: 80px 0;
 }
 
-.card {
-    background-color: coral;
-    padding: 20px;
-    margin: 50px;
-    width: 200px;
-    height: 220px;
-    
+.content {
+    width: 1200px;
 }
+
+.container .content{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    width: 80%;
+
+    justify-content: space-between;
+}
+.content .box{
+    border-radius: 15px;
+    padding: 20px;
+    margin: 20px 0;
+    background-color: white;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+}
+
+.content .box .deskripsi p {
+    text-align: center;
+}
+
 
 .container-contact {
     display: flex;
     justify-content: center;
     box-shadow:  5px 10px 8px 10px #e1e1e1;
-    background-color: yellow;
-    
-    
+    margin: 50px;
+    border-radius: 15px;
 }
 
 .content-contact {
-    width: 1200px;
+    width: 1090px;
+
     justify-content: space-between;
     align-items: center;
     padding: 50px;
-
+    width: 1400px;
 }
 
 .contact {
@@ -261,6 +284,26 @@ main {
     gap: 25px;
     align-items: center;
     padding: 15px 0;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    margin: 25px;
+    padding:25px;
+    width: 1400px;
+    color: white;
+}
+
+.container-footer {
+    background-color: rgb(45, 45, 45);
+    display: flex;
+    justify-content: center;
+}
+
+.footer-social {
+    display: flex;
+    gap: 25px;
 }
 
 
